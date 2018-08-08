@@ -5,6 +5,12 @@
     Image
   <% end %>
 
+  <!-- Barre de recherche -->
+  <form class="form-inline">
+    <input class="form-control" name="query" type="search" placeholder="Votre recherche" aria-label="Search" value="<%= params[:query] %>">
+    <button class="btn btn-warning" type="submit">Search</button>
+  </form>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 

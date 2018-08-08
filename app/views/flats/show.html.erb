@@ -9,3 +9,10 @@
     <p>Prix/nuit : <%= @flat.price_per_night %>€</p>
   </div>
 </div>
+<%= link_to 'Modifier le logement', edit_flat_path(@flat), class: 'btn btn-success' %>
+<%= link_to 'Supprimer le logement', flat_path(@flat), method: :delete, class: 'btn btn-danger' %>
+
+<div class="mapbox">
+  <%= image_tag("https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=500x250&sensor=false&maptype=roadmap&key=AIzaSyDHD4WJ_6qZWj1uwGAe_5-7_y2pNMODtpQ&markers=color:red|#{@flat.address}") %>
+<!-- &key=AIzaSyCjjmSov2icFDG3Egki6mHXjzsMBztj7Tc -->
+</div>
