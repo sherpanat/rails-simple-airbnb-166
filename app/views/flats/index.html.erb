@@ -1,1 +1,13 @@
 <h2>Listing des appartements disponibles</h2>
+
+<div class="row">
+  <div class="col-xs-6">
+    <% @flats.each do |flat| %>
+      <li><%= link_to flat.name, flat_path(flat) %></li>
+    <% end %>
+  </div>
+  <div class="col-xs-6">
+    <h4>Ajouter un appartement</h4>
+    <%= render 'form', flat: @flat %>
+  </div>
+</div>
